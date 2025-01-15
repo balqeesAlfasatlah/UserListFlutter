@@ -39,8 +39,6 @@ class PhotoList extends StatefulWidget {
 }
 
 class _PhotoListState extends State<PhotoList> {
-  Future<List<User>>? usersDetails;
-
   List<User> users = [];
   bool isLoading = true;
   String? errorMessage;
@@ -49,7 +47,6 @@ class _PhotoListState extends State<PhotoList> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    usersDetails = NetworkHelper('https://reqres.in/api/users').fetchUsers();
     fetchUsersData();
   }
 
